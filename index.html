@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jinwoo Jung</title>
+<meta name="description" content="M.S. student at Hanyang University. I work on diffusion models: deciding where an edit should land, and where inference compute should go.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1a1a1a; --muted:#6b6b6b; --line:#e8e8e8;
+    --accent:#1f4e79; --bg:#ffffff;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    font-size:16px; line-height:1.68; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1320px; margin:0 auto; padding:72px 48px 96px}
+  a{color:var(--accent); text-decoration:none}
+  a:hover{text-decoration:underline}
+
+  header{display:flex; gap:36px; align-items:flex-start; margin-bottom:38px}
+  header .shot{width:200px; border-radius:7px; flex-shrink:0; display:block}
+  h1{font-size:31px; font-weight:700; margin:0 0 12px; letter-spacing:-.022em}
+  .bio{margin:0 0 13px; color:#2e2e2e; max-width:70ch}
+  .bio strong{font-weight:600}
+  .k{color:var(--accent); font-weight:500}
+  .avail{font-size:15px; color:#555; margin:0 0 15px}
+  .links{font-size:14.5px; color:var(--muted)}
+  .sep{color:#d8d8d8; margin:0 8px}
+
+  h2{
+    font-size:12.5px; font-weight:600; letter-spacing:.09em; text-transform:uppercase;
+    color:var(--muted); margin:46px 0 14px; padding-bottom:8px; border-bottom:1px solid var(--line);
+  }
+
+  .news{margin:0; padding:0; list-style:none; font-size:15px}
+  .news li{display:flex; gap:16px; padding:5px 0; color:#333}
+  .news .date{color:var(--muted); min-width:72px; font-size:14px}
+
+  .paper{display:flex; gap:30px; padding:28px 0; border-bottom:1px solid #f2f2f2; align-items:flex-start}
+  .paper:last-of-type{border-bottom:none}
+  .thumb{
+    width:380px; flex-shrink:0; border-radius:5px; overflow:hidden;
+    border:1px solid var(--line); background:#fff; align-self:flex-start;
+    line-height:0;
+  }
+  .thumb img{width:100%; display:block}
+  .meta{flex:1; min-width:0}
+  .ptitle{font-weight:600; margin:0 0 5px; line-height:1.42}
+  .authors{font-size:14.5px; color:#555; margin:0 0 3px}
+  .authors .me{font-weight:600; color:var(--ink)}
+  .venue{font-size:14px; color:var(--muted); margin:0 0 8px}
+  .venue .tag{color:var(--accent); font-weight:500}
+  .tldr{font-size:14.5px; color:#3a3a3a; margin:0 0 9px; line-height:1.55}
+  .badges a, .badges span{
+    display:inline-block; font-size:12.5px; padding:2px 9px; margin:0 5px 0 0;
+    border:1px solid var(--line); border-radius:3px; color:var(--muted);
+  }
+  .badges a:hover{border-color:var(--accent); color:var(--accent); text-decoration:none}
+  .badges .soon{border-style:dashed; color:#9a9a9a}
+
+  footer{margin-top:52px; padding-top:18px; border-top:1px solid var(--line);
+         font-size:13.5px; color:var(--muted)}
+
+  @media (max-width:880px){
+    .wrap{padding:40px 20px 64px}
+    header{flex-direction:column; gap:18px}
+    header .shot{width:150px}
+    .paper{flex-direction:column; gap:14px}
+    .thumb{width:100%; max-width:520px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <img class="shot" src="images/profile.jpg" alt="Jinwoo Jung">
+  <div>
+    <h1>Jinwoo Jung</h1>
+    <p class="bio">
+      Hello! I am Jinwoo Jung, an M.S. student at <strong>Hanyang University</strong>, advised by
+      Prof. Joon-Hyuk Chang in the <a href="https://asmllab.hanyang.ac.kr/kor/page/index.php">ASML Lab</a>,
+      where I work on diffusion models &mdash; controllable generation and efficient inference.
+    </p>
+    <p class="bio">
+      I built an audio editing model that applies an edit only to the time span specified in the
+      instruction and leaves the rest of the recording unchanged (INTERSPEECH 2026,
+      <a href="https://jinwoo0302.github.io/emkr-demo/">demo</a>), and worked on adapting the rank of
+      each layer per timestep and per block to reduce inference cost without retraining, on both
+      image and audio diffusion models (NeurIPS 2026).
+    </p>
+    <p class="bio">
+      I received a B.S. in Computer Science from Konkuk University, and spent a semester at
+      ZHAW in Switzerland as an exchange student.
+    </p>
+    <div class="links">
+      <a href="mailto:jinwoo0302@hanyang.ac.kr">Email</a>
+      <span class="sep">/</span>
+      <a href="https://scholar.google.com/citations?user=2w-XxCIAAAAJ&amp;hl=en">Google&nbsp;Scholar</a>
+      <span class="sep">/</span>
+      <a href="https://github.com/jinwoo0302">GitHub</a>
+      <span class="sep">/</span>
+      <a href="https://www.linkedin.com/in/jinwoo-jung-486963320/">LinkedIn</a>
+      <span class="sep">/</span>
+      <a href="cv.pdf">CV</a>
+
+    </div>
+  </div>
+</header>
+
+<h2>News</h2>
+<ul class="news">
+  <li><span class="date">Dec 2026</span><span>I will present the <strong>SARA</strong> poster at NeurIPS 2026 in Atlanta on December 11. See you in Atlanta!</span></li>
+  <li><span class="date">Nov 2026</span><span>A first-author follow-up on few-step sampling is under review.</span></li>
+  <li><span class="date">Sep 2026</span><span>Presented <strong>EMKR</strong> and <strong>BCA</strong> at INTERSPEECH 2026 in Sydney.</span></li>
+  <li><span class="date">Sep 2026</span><span><strong>SARA</strong> was accepted at NeurIPS 2026 (Main Track).</span></li>
+  <li><span class="date">Jun 2026</span><span><strong>EMKR</strong> and <strong>BCA</strong> were accepted at INTERSPEECH 2026. <a href="https://jinwoo0302.github.io/emkr-demo/">Audio samples</a> for EMKR are online.</span></li>
+</ul>
+
+<h2>Publications</h2>
+
+<div class="paper">
+  <div class="thumb"><img src="images/sara.png" alt="SARA overview"></div>
+  <div class="meta">
+    <p class="ptitle">SARA: Step-Adaptive Rank Adjustment for Diffusion Inference Acceleration</p>
+    <p class="authors">Dong Hoon Lim*, <span class="me">Jinwoo Jung</span>*, Won-Gook Choi, Joon-Hyuk Chang</p>
+    <p class="venue"><span class="tag">NeurIPS 2026</span> &nbsp;&middot;&nbsp; Main Track &nbsp;&middot;&nbsp; *equal contribution</p>
+    <p class="tldr">
+      SARA is a training-free framework that adapts the SVD rank of pretrained linear layers per
+      step and per block at inference, accelerating diffusion at matched quality. It composes with
+      solver- and cache-based acceleration for compounded speedups, introducing rank as a new axis
+      of diffusion inference acceleration.
+    </p>
+    <p class="badges"><span class="soon">paper &mdash; coming soon</span><span class="soon">code &mdash; coming soon</span></p>
+  </div>
+</div>
+
+<div class="paper">
+  <div class="thumb"><img src="images/emkr.png" alt="EMKR overview"></div>
+  <div class="meta">
+    <p class="ptitle">Edit the Moment, Keep the Rest: Time-Localized Audio Editing via Instruction</p>
+    <p class="authors"><span class="me">Jinwoo Jung</span>, Gihun Son, Won-Gook Choi, Joon-Hyuk Chang</p>
+    <p class="venue"><span class="tag">INTERSPEECH 2026</span></p>
+    <p class="tldr">
+      EMKR is an instruction-driven editing framework for polyphonic audio, built on Stable Audio
+      Open. It edits a single occurrence of a sound within the time interval the instruction
+      specifies, at 100 ms precision, and leaves the rest of the clip unchanged.
+    </p>
+    <p class="badges">
+      <a href="https://www.isca-archive.org/interspeech_2026/jung26c_interspeech.html">paper</a>
+      <a href="https://jinwoo0302.github.io/emkr-demo/">demo</a>
+    </p>
+  </div>
+</div>
+
+<div class="paper">
+  <div class="thumb"><img src="images/bca.png" alt="BCA module"></div>
+  <div class="meta">
+    <p class="ptitle">Branch-wise Complementary Attention for Acoustic Scene Classification</p>
+    <p class="authors">Seung-Gyu Han*, <span class="me">Jinwoo Jung</span>*, Pil Moo Byun, Won-Gook Choi, Joon-Hyuk Chang</p>
+    <p class="venue"><span class="tag">INTERSPEECH 2026</span> &nbsp;&middot;&nbsp; *equal contribution</p>
+    <p class="tldr">
+      BCA is an attention module for multi-branch acoustic scene classifiers. It allocates channel,
+      time, frequency, and joint time-frequency attention across branches by their receptive field
+      characteristics, giving each branch the axis its own kernel does not cover, and outperforms
+      existing attention modules on the TAU Urban Acoustic Scenes benchmarks.
+    </p>
+    <p class="badges">
+      <a href="https://www.isca-archive.org/interspeech_2026/han26b_interspeech.html">paper</a>
+    </p>
+  </div>
+</div>
+
+<footer>
+  Last updated October 2026.
+</footer>
+
+</div>
+</body>
+</html>
