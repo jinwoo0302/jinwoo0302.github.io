@@ -45,11 +45,11 @@
   .paper{display:flex; gap:30px; padding:28px 0; border-bottom:1px solid #f2f2f2; align-items:flex-start}
   .paper:last-of-type{border-bottom:none}
   .thumb{
-    width:380px; flex-shrink:0; border-radius:5px; overflow:hidden;
+    width:380px; height:200px; flex-shrink:0; border-radius:5px; overflow:hidden;
     border:1px solid var(--line); background:#fff; align-self:flex-start;
-    line-height:0;
+    display:flex; align-items:center; justify-content:center;
   }
-  .thumb img{width:100%; display:block}
+  .thumb img{max-width:100%; max-height:100%; width:auto; display:block}
   .meta{flex:1; min-width:0}
   .ptitle{font-weight:600; margin:0 0 5px; line-height:1.42}
   .authors{font-size:14.5px; color:#555; margin:0 0 3px}
@@ -72,7 +72,7 @@
     header{flex-direction:column; gap:18px}
     header .shot{width:150px}
     .paper{flex-direction:column; gap:14px}
-    .thumb{width:100%; max-width:520px}
+    .thumb{width:100%; max-width:520px; height:auto}
   }
 </style>
 </head>
